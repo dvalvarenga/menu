@@ -1,5 +1,5 @@
 import {Http} from '@angular/http';
-import 'rxjs/add/operator/map2';
+import 'rxjs/add/operator/map';
   
 export class ProdutoService {  
     static get parameters() {
