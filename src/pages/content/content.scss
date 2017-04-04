@@ -1,0 +1,45 @@
+page-content {
+  .item-profile {
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+    background-color: mediumpurple; 
+  }
+
+  .item-detail {
+    width: 100%;
+    background: white;
+    position: absolute;
+  }
+  ion-header {
+    background-color: mediumpurple;
+            
+ }
+
+  .profile-img {
+    margin: auto;
+    background: url('../assets/img/photo.png') repeat transparent;
+    background-size: 100%; 
+    width: 100px;
+    height: 96px;
+  }
+  .nickname {
+    font-weight: 900;
+   color: #fff;
+    
+  }
+
+  .followers{
+    color: #fff;
+  }
+
+  .items{
+    z-index: 0;
+  }
+
+ 
+}
+
+
+

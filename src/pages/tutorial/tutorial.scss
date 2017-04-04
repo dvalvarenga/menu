@@ -1,0 +1,54 @@
+page-tutorial {
+
+  .button{
+    font-weight: 800;
+    color :white;
+    background-color: transparent ;
+    box-shadow: none;
+    float: right;
+  }
+
+  .toolbar-background {
+    background: transparent;
+    border-color: transparent;
+  }
+
+  .slide-zoom {
+    height: 100%;
+  }
+
+ion-slides{
+  background-image: url(../assets/img/slide1.jpg);
+  background-size: cover;
+}
+
+
+  .slide-title {
+    margin-top: 90%;
+  } 
+
+  .slide-image {
+    max-height: 40%;
+    max-width: 60%;
+    margin: 36px 0;
+  }
+  h2{
+    color: white;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  p {
+    padding: 0 40px;
+    font-size: 14px;
+    line-height: 1.5;
+    color : white;
+
+    b {
+      color: white;
+    }
+  }
+
+}

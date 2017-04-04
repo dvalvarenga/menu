@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="black">
+    <ion-title>{{produto?.nomeProduto }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div>
+  <div class="item-detail" padding>
+    <div class="titulo"><p>{{produto?.nomeProduto}}</p></div>
+    <div class="preco"><p>{{item.note}}</p></div>
+    <p>{{item.about}}</p>
+<div style="background-color: black;"> 
+  <p style="color: white;font-weight: bold;padding: 5px 5px 5px 5px;">
+    <i class="fa fa-plus-square" aria-hidden="true"></i>  Algum adicional ?
+  </p> 
+  </div>
+<ion-list>
+    <ion-item *ngFor="let adicional of produto?.adicionais">
+      <ion-checkbox ng-model="isChecked" color="secondary">Checkbox Label</ion-checkbox>
+     <ion-label>{{adicional.nomeAdicional}}</ion-label>
+    </ion-item>
+  </ion-list>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar (click)="testePedido();">
+    <ion-title>Fazer pedido</ion-title>
+  </ion-toolbar>
+</ion-footer>

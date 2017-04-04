@@ -1,0 +1,45 @@
+
+ 
+<ion-header>
+  <ion-navbar color="black">
+  </ion-navbar>
+</ion-header>
+
+<!--<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of currentItems">
+      <button ion-item (click)="openItem(item)">
+        <ion-item item-left>
+          <img [src]="item.profilePic" />
+        </ion-item>
+        <h2>{{item.name}}</h2>
+        <p>{{item.about}}</p>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>-->
+
+
+<ion-content fullscreen>
+ 
+    <ion-card *ngFor="let item of currentItems" (click)="openItem(item)">
+ 
+      <div style="background-image: url('assets/img/speakers/foto-prato.jpeg');width: 100%;height: 100px;">
+        <div style="background-color: rgba(0,0,0, 0.5);z-index: 99;width: 100%;height: 100px; text-align: center;padding-top: 5%">
+          <!--<ion-note item-right *ngIf="item.note">{{item.note}}</ion-note>-->
+          <span style="color: white;font-weight: 600;font-size: 18px;">{{item.nomeProduto}}</span><br/>
+          <span style="color: white;font-size: 12px;">{{item.descricaoProduto}}</span> <br/>
+          <span style="color: white;font-size: 16px;"><Strong>{{item.valorProduto}}</Strong></span> 
+        </div>
+      </div>
+
+    </ion-card>
+ 
+</ion-content>

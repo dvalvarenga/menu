@@ -1,0 +1,52 @@
+page-item-detail {
+  .item-profile {
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    height: 250px;
+  }
+
+  .item-detail {
+    width: 100%;
+    background: white;
+    position: absolute;
+  }
+
+  .titulo {
+    float: left;
+    width: 75%;
+    font-size: 18px;
+    margin-top: -25px;
+  }
+  .preco{
+    font-size: 18px;
+    margin-top: -25px;
+  }
+
+  ion-item{
+    border-top: 0px!important;
+    border-bottom: 0px!important;
+  }
+
+  ion-item p{
+    float: left;
+    color: black;
+  }
+
+  ion-label{
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+.toolbar-background{
+  background-color: black;
+}
+.toolbar-title{
+  color: white;
+}
+
+  ion-toast{
+    background-color: red!important;
+   font-weight: bold;
+  }
+}

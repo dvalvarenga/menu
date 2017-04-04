@@ -1,0 +1,34 @@
+page-estabelecimento {
+    ion-content{
+        background-image: url('../assets/img/background-1.jpg');
+        background-size: cover;
+        text-align: center;
+    }
+
+    .button{
+        margin-top: 80%;
+        background-color: transparent;
+    }            
+
+    .overlay{
+        position: absolute;
+        content:" ";
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        display: block;
+        z-index: 1;
+        background-color: rgba(0,0,0,0.65);
+        }
+
+        p{
+            color: white;
+            padding-top: 20%;
+            margin: 0 auto;
+            z-index: 99;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+}
