@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { Http } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { CommonModule } from '@angular/common';
 
 import { MyApp } from './app.component';
 
@@ -23,11 +24,13 @@ import { ScannerPage } from '../pages/scanner/scanner';
 import { EstabelecimentoPage } from '../pages/estabelecimento/estabelecimento';
 
 
+
 import { User } from '../providers/user';
 import { Api } from '../providers/api';
 import { EstabelecimentoService } from '../providers/estabelecimento-service';
 import { CardapioService } from '../providers/cardapio-service';
 import { ProdutoService } from '../providers/produto-service';
+import { MesaService } from '../providers/mesa-service';
 import { Settings } from '../providers/settings';
 import { Items } from '../mocks/providers/items';
 
@@ -99,6 +102,7 @@ export function providers() {
     EstabelecimentoService,
     CardapioService,
     ProdutoService,
+    MesaService,
 
     { provide: Settings, useFactory: provideSettings, deps: [ Storage ] },
     // Keep this to enable Ionic's runtime error handling during development
@@ -108,7 +112,7 @@ export function providers() {
 
 @NgModule({
   declarations: declarations(),
-  imports: [
+  imports: [CommonModule,
     IonicModule.forRoot(MyApp,{backButtonText: ' '}),
     TranslateModule.forRoot({
       provide: TranslateLoader,

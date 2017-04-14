@@ -1,7 +1,16 @@
 <ion-content no-bounce>
+<!-- <ion-content no-bounce *ngStyle="{'background-image': 'url('+ imagemFundo +')' || none }"> -->
   <div class="overlay">
-    <p> {{nomeEstabelecimento}} </p>
-    <p> {{numeroMesa}} </p>
-    <button ion-button  (click)="abrirCardapioDia()">Ver cardápio...</button>
+
+    <div *ngIf="mesa">
+      <p class="label">Você está em...</p>
+      <p class="estabelecimento"> {{mesa?.estabelecimento.nomeEstabelecimento}} </p>
+      <!-- <p class="numeroMesa"> {{mesa?.numeroMesa}} </p> -->
+      <!-- <img class="mesa-icon" src="assets/img/mesa.svg" /> <br/> -->
+      <button ion-button  (click)="abrirCardapioDia(mesa?.codigoMesa)">Ver cardápio</button>
+    </div>
+    <div *ngIf="erro">
+      <p class="erro">{{erro}}</p>
+    </div>
   </div>
 </ion-content>

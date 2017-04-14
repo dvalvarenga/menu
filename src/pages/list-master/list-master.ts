@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, NavParams,  LoadingController  } from 'ionic-angular';
 
 import { ItemDetailPage } from '../item-detail/item-detail';
 import { ItemCreatePage } from '../item-create/item-create';
@@ -15,23 +15,36 @@ import { ProdutoService} from '../../providers/produto-service';
 })
 export class ListMasterPage {
   currentItems: Item[];
+  codigoCardapio: any;
+  loading: any;
+  selecao: any;
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController,public produtoService: ProdutoService) {
+  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController,public produtoService: ProdutoService, public navParams: NavParams, public loadingController:LoadingController ) {
+    this.selecao="1";
     this.currentItems = this.items.query();
+    this.codigoCardapio = navParams.get("codigoCardapio");
+    this.loading = this.loadingController.create({
+      content: '<ion-spinner name="dots"></ion-spinner>'
+    });
   }
 
   /**
    * The view loaded, let's query our items for the list
    */
   ionViewDidLoad() {
-      this.produtoService.buscarProdutosCardapio(1).subscribe(
+      this.loading.present();
+      this.produtoService.buscarProdutosCardapio(this.codigoCardapio).subscribe(
                 data => {
                     this.currentItems = data;
                 },
                 err => {
                     console.log(err);
-                }, 
-                () => console.log('Movie Search Complete')
+                    this.loading.dismiss();
+                },
+                () => {
+                  console.log('Produtos carregados para o cardápio: '+this.codigoCardapio);
+                  this.loading.dismiss();
+                }
             );
   }
 
@@ -64,4 +77,24 @@ export class ListMasterPage {
       item: item
     });
   }
+
+  atualizar(codigoSelecionado){
+    //this.loading.present();
+    this.produtoService.buscarProdutosCardapio(codigoSelecionado).subscribe(
+            data => {
+                this.currentItems = data;
+            },
+            err => {
+                console.log(err);
+              //  this.loading.dismiss();
+            },
+            () => {
+              console.log('Produtos recarregados para o cardápio: '+codigoSelecionado);
+            //  this.loading.dismiss();
+            }
+        );
+  }
+
+
+
 }

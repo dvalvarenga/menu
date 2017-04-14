@@ -1,14 +1,28 @@
 page-estabelecimento {
-    ion-content{
-        background-image: url('../assets/img/background-1.jpg');
-        background-size: cover;
-        text-align: center;
+
+    .label{
+      padding-top: 60%;
+      font-size: 12px;
+      color: white;
     }
 
     .button{
-        margin-top: 80%;
+        margin-top: 15%;
         background-color: transparent;
-    }            
+        border-radius: 5px;
+        border: 1px solid white;
+    }
+
+      .mesa-icon{
+        width: 15%;
+        height: 7%;
+      }
+
+    ion-content{
+        background-image: url(../assets/img/slide1.jpg);
+        background-size: cover;
+        text-align: center;
+    }
 
     .overlay{
         position: absolute;
@@ -22,13 +36,40 @@ page-estabelecimento {
         background-color: rgba(0,0,0,0.65);
         }
 
-        p{
+        .estabelecimento{
             color: white;
-            padding-top: 20%;
+
             margin: 0 auto;
             z-index: 99;
             font-size: 18px;
             font-weight: 800;
+        }
+
+        .numeroMesa{
+          color: white;
+          padding-top: 5%;
+          margin: 0 auto;
+          z-index: 99;
+          font-size: 22px;
+          font-weight: 800;
+          margin-bottom: -4%;
+
+        }
+
+        .erro{
+          color: white;
+          padding-top: 5%;
+          margin: 0 auto;
+          z-index: 99;
+          font-size: 18px;
+          font-weight: 800;
+        }
+
+        ion-spinner * {
+          width: 28px;
+          height: 28px;
+          stroke: #444;
+          fill: white;
         }
 
 }

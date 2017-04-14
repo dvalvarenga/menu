@@ -1,5 +1,5 @@
 
- 
+
 <ion-header>
 
   <ion-navbar color="black">
@@ -17,61 +17,12 @@
 
 <ion-content fullscreen>
 
-  
- 
- <!--
-    <ion-segment [(ngModel)]="category">
-        <ion-segment-button value="gear">
-            Todos
-        </ion-segment-button>
-        <ion-segment-button value="clothing">
-            Preferidos
-        </ion-segment-button>
-       
-    </ion-segment> -->
- 
-    <ion-card *ngFor="let card of cards" (click)="openCardapio()">
- 
-      <!--<ion-item>-->
-        <!--<ion-avatar item-left>
-          <img src="https://avatars.io/facebook/joshua.morony" />
-        </ion-avatar>-->
-        <!--<h2>Josh Morony</h2>-->
-        <!--<p>November 5, 1955</p>-->
-      <!--</ion-item>-->
+    <ion-card *ngFor="let card of cards" (click)="openCardapio(card.codigoCardapio)">
       <div style="background-image: url('http://lorempixel.com/500/200/food');width: 100%;height: 200px;">
         <div style="background-color: rgba(0,0,0, 0.5);z-index: 99;width: 100%;height: 200px; text-align: center;padding-top: 15%">
           <span style="color: white;font-weight: 600;font-size: 22px;">{{card.tituloCardapio}}</span><br/>
-          <span style="color: white;font-size: 14px;">{{card.subtituloCardapio}}</span> 
+          <span style="color: white;font-size: 14px;">{{card.subtituloCardapio}}</span>
         </div>
       </div>
-
-
- 
-      <!--<ion-card-content>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-      </ion-card-content>
- 
-      <ion-row>
-        <ion-col>
-          <button ion-button icon-left clear small>
-            <ion-icon name="thumbs-up"></ion-icon>
-            <div>12 Likes</div>
-          </button>
-        </ion-col>
-        <ion-col>
-          <button ion-button icon-left clear small>
-            <ion-icon name="text"></ion-icon>
-            <div>4 Comments</div>
-          </button>
-        </ion-col>
-        <ion-col center text-center>
-          <ion-note>
-            11h ago
-          </ion-note>
-        </ion-col>
-      </ion-row>-->
- 
     </ion-card>
- 
 </ion-content>

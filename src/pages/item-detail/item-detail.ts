@@ -18,10 +18,10 @@ export class ItemDetailPage {
     this.loading = this.loadingController.create({
       content: '<ion-spinner></ion-spinner>'
     });
-    
+
     this.item = navParams.get('item');
 
-    
+
   }
 
   ionViewDidLoad(){
@@ -32,10 +32,10 @@ export class ItemDetailPage {
                 },
                 err => {
                     console.log(err);
-                }, 
+                },
                 () => {
                 this.loading.dismiss();
-                console.log('Movie Search Complete')
+                console.log('Produto :'+this.produto.codigoProduto +'-'+ this.produto.nomeProduto+' carregado');
                 }
             );
   }
@@ -44,7 +44,7 @@ export class ItemDetailPage {
 
   testePedido(){
       let toast = this.toastController.create({
-      message: 'Já enviamos seu pedido para a cozinha, agora é só aguardar que em alguns instantes você tem a confirmação', 
+      message: 'Já enviamos seu pedido para a cozinha, agora é só aguardar que em alguns instantes você tem a confirmação',
       duration: 51111000,
       position: 'middle',
     });

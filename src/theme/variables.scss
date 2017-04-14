@@ -23,7 +23,7 @@ $font-path: "../assets/fonts";
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 $colors: (
-  primary:    mediumpurple,
+  primary:    black,
   secondary:  #7f8c8d,
   danger:     #f53d3d,
   light:      #fff,
@@ -32,17 +32,19 @@ $colors: (
 );
 
 
+
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
+$loading-ios-background : transparent;
 
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
+$loading-md-background : transparent;
 
 
 
