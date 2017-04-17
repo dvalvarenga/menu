@@ -11,7 +11,7 @@ export class CardapioService {
     }
 
     buscarCardapiosDia(codigoEstabelecimento) {
-        var url = 'http://localhost:8080/teste/rest/cardapioService/listaCardapiosDia/'+codigoEstabelecimento;
+        var url = 'http://45.79.95.61/menu/rest/cardapioService/listaCardapiosDia/'+codigoEstabelecimento;
         var response = this.http.get(url).map(res => res.json());
         return response;
     }

@@ -23,7 +23,7 @@ export class EstabelecimentoService {
     }
  
     return new Promise(resolve => {
-      this.http.get('http://192.168.0.15:8080/teste/rest/service/todasEstabelecimentos')
+      this.http.get('http://45.79.95.61/menu/rest/service/todasEstabelecimentos')
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;

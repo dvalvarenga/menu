@@ -44,7 +44,7 @@ export class EstabelecimentoPage {
               },
               err => {
                 this.loading.dismiss();
-                this.erro = "Não foi possível identificar sua mesa.Você está sem conexão com a internet ? =(";
+                this.erro = "Você está sem internet ? =(";
                 console.log(err);
               },
               () => {

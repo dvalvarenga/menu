@@ -11,7 +11,7 @@ export class MesaService {
     }
 
     identificarMesa(codigoMesa) {
-        var url = 'http://localhost:8080/teste/rest/mesaService/getMesa/'+codigoMesa;
+        var url = 'http://45.79.95.61/menu/rest/mesaService/getMesa/'+codigoMesa;
         var response = this.http.get(url).map(res => res.json());
         return response;
     }

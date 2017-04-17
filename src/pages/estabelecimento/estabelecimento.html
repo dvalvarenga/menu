@@ -6,11 +6,13 @@
       <p class="label">Você está em...</p>
       <p class="estabelecimento"> {{mesa?.estabelecimento.nomeEstabelecimento}} </p>
       <!-- <p class="numeroMesa"> {{mesa?.numeroMesa}} </p> -->
-      <!-- <img class="mesa-icon" src="assets/img/mesa.svg" /> <br/> -->
       <button ion-button  (click)="abrirCardapioDia(mesa?.codigoMesa)">Ver cardápio</button>
     </div>
     <div *ngIf="erro">
-      <p class="erro">{{erro}}</p>
+      <p class="erro">
+       <img class="signal-icon" src="assets/img/signal.svg" /> <br/> 
+        {{erro}}
+      </p>
     </div>
   </div>
 </ion-content>

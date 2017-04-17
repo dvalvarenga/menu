@@ -11,13 +11,13 @@ export class ProdutoService {
     }
 
     buscarProdutosCardapio(codigoCardapio) {
-        var url = 'http://localhost:8080/teste/rest/produtoService/listaProdutosCardapio/'+codigoCardapio;
+        var url = 'http://45.79.95.61/menu/rest/produtoService/listaProdutosCardapio/'+codigoCardapio;
         var response = this.http.get(url).map(res => res.json());
         return response;
     }
 
     detalharProduto(codigoProduto){
-         var url = 'http://localhost:8080/teste/rest/produtoService/getProduto/'+codigoProduto;
+         var url = 'http://45.79.95.61/menu/rest/produtoService/getProduto/'+codigoProduto;
         var response = this.http.get(url).map(res => res.json());
         return response;
     }

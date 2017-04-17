@@ -26,7 +26,7 @@
           <div style="background-color: rgba(0,0,0, 0.5);z-index: 99;width: 100%;height: 100px; text-align: center;padding-top: 5%">
             <span style="color: white;font-weight: 600;font-size: 18px;">{{item.nomeProduto}}</span><br/>
             <span style="color: white;font-size: 12px;">{{item.descricaoProduto}}</span> <br/>
-            <span style="color: white;font-size: 16px;"><Strong>{{item.valorProduto}}</Strong></span>
+            <span style="color: white;font-size: 16px;"><Strong>{{item.valorProduto | currency:'BRL' }}</Strong></span>
           </div>
         </div>
     </ion-card>
