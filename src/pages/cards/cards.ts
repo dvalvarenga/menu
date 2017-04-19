@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController , ModalController, NavParams, LoadingController } from 'ionic-angular';
 //import { ContentPage } from '../content/content';
-import { SettingsPage } from '../settings/settings';
+import { ComandaPage } from '../comanda/comanda';
 import { ListMasterPage } from '../list-master/list-master';
 import { CardapioService} from '../../providers/cardapio-service';
 import { Http } from '@angular/http';
@@ -15,14 +15,15 @@ import 'rxjs/add/operator/map';
 })
 
 export class CardsPage {
-  public estabelecimento: any;
-
+    nomeEstabelecimento: any;
      cards: any;
      codigoMesa : any;
      loading: any;
 
     constructor(public navCtrl: NavController,public cardapioService: CardapioService,public modalCtrl: ModalController,public http: Http, public navParams: NavParams,public loadingController:LoadingController) {
       this.codigoMesa = navParams.get("codigoMesa");
+      this.nomeEstabelecimento = navParams.get("nomeEstabelecimento");
+      alert(this.nomeEstabelecimento);
       this.loading = this.loadingController.create({
         content: '<ion-spinner name="dots"></ion-spinner>'
       });
@@ -78,12 +79,12 @@ export class CardsPage {
     //this.navCtrl.push(ContentPage);
   // }
 
-   openSettings() {
-    this.navCtrl.push(SettingsPage);
+   openComanda() {
+    this.navCtrl.push(ComandaPage);
   }
 
-  openCardapio(codigoCardapio){
-    this.navCtrl.push(ListMasterPage, {codigoCardapio : codigoCardapio}, {
+  openCardapio(codigoCardapio,tituloCardapio){
+    this.navCtrl.push(ListMasterPage, {codigoCardapio : codigoCardapio, tituloCardapio: tituloCardapio }, {
       animate: true,
       direction: 'forward'
     });

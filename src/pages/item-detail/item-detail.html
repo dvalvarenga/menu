@@ -6,23 +6,28 @@
 
 <ion-content>
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+
+    <div class="img-footer">
+      <div class="titulo"><p>{{produto?.nomeProduto}}</p>
+      </div>
+      <div class="preco"><p>{{produto?.valorProduto | currency : 'brl' : true : '.2-2'}}</p></div>
+
+    </div>
   </div>
-  <div class="item-detail" padding>
-    <div class="titulo"><p>{{produto?.nomeProduto}}</p></div>
-    <div class="preco"><p>{{item.note}}</p></div>
-    <p>{{item.about}}</p>
-<div style="background-color: black;"> 
-  <p style="color: white;font-weight: bold;padding: 5px 5px 5px 5px;">
+  <div class="item-detail">
+    <p>{{produto?.descricaoProduto}}</p>
+<div style="background-color: black;" *ngIf="adicionais?.length != 0" >
+  <p style="color: white;font-weight: bold;padding: 5px 5px 5px 5px;margin: 0 auto;">
     <i class="fa fa-plus-square" aria-hidden="true"></i>  Algum adicional ?
-  </p> 
-  </div>
+  </p>
 <ion-list>
     <ion-item *ngFor="let adicional of produto?.adicionais">
-      <ion-checkbox ng-model="isChecked" color="secondary">Checkbox Label</ion-checkbox>
+      <ion-checkbox ng-model="isChecked" color="secondary"></ion-checkbox>
      <ion-label>{{adicional.nomeAdicional}}</ion-label>
     </ion-item>
   </ion-list>
-  </div>
+</div>
+</div>
 </ion-content>
 <ion-footer>
   <ion-toolbar (click)="testePedido();">

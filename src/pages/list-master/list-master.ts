@@ -16,15 +16,17 @@ import { ProdutoService} from '../../providers/produto-service';
 export class ListMasterPage {
   currentItems: Item[];
   codigoCardapio: any;
+  tituloCardapio : any;
   loading: any;
   selecao: any;
 
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController,public produtoService: ProdutoService, public navParams: NavParams, public loadingController:LoadingController ) {
-    this.selecao="1";
+    this.selecao="false";
     this.currentItems = this.items.query();
     this.codigoCardapio = navParams.get("codigoCardapio");
+    this.tituloCardapio = navParams.get("tituloCardapio");
     this.loading = this.loadingController.create({
-      content: '<ion-spinner name="dots"></ion-spinner>'
+      content: '<ion-spinner name="dots">Carregando...</ion-spinner>'
     });
   }
 
@@ -86,11 +88,11 @@ export class ListMasterPage {
             },
             err => {
                 console.log(err);
-              //  this.loading.dismiss();
+      //        this.loading.dismiss();
             },
             () => {
               console.log('Produtos recarregados para o cardápio: '+codigoSelecionado);
-            //  this.loading.dismiss();
+        //      this.loading.dismiss();
             }
         );
   }

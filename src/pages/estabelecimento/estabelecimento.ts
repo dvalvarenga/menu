@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams , LoadingController } from 'ionic-angular';
 import { CardsPage } from '../cards/cards';
+import { Storage } from '@ionic/storage';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
@@ -24,8 +25,15 @@ export class EstabelecimentoPage {
   loading: any;
   imagemFundo: any;
   erro : any;
+  username: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public http: Http , public loadingController:LoadingController,public mesaService: MesaService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http: Http , public loadingController:LoadingController,public mesaService: MesaService,public storage: Storage) {
+
+  this.storage.get('username').then((val) => {
+    this.username = val;
+    console.log(val);
+  })
+
   this.imagemFundo = '../assets/img/background-blur.jpg';
     this.loading = this.loadingController.create({
       content: '<ion-spinner name="dots"></ion-spinner>'
@@ -54,7 +62,8 @@ export class EstabelecimentoPage {
   }
 
   abrirCardapioDia(codigoMesa){
-      this.navCtrl.setRoot(CardsPage, {codigoMesa : codigoMesa}, {
+      this.storage.set('username', this.username);
+      this.navCtrl.setRoot(CardsPage, {codigoMesa : codigoMesa , nomeEstabelecimento : this.mesa.estabelecimento.nomeEstabelecimento}, {
         animate: true,
         direction: 'forward'
       });

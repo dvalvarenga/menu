@@ -2,15 +2,15 @@
 <!-- <ion-content no-bounce *ngStyle="{'background-image': 'url('+ imagemFundo +')' || none }"> -->
   <div class="overlay">
 
-    <div *ngIf="mesa">
+    <div class="conteudo" *ngIf="mesa">
       <p class="label">Você está em...</p>
       <p class="estabelecimento"> {{mesa?.estabelecimento.nomeEstabelecimento}} </p>
-      <!-- <p class="numeroMesa"> {{mesa?.numeroMesa}} </p> -->
-      <button ion-button  (click)="abrirCardapioDia(mesa?.codigoMesa)">Ver cardápio</button>
+      <ion-input class="input-nome" placeholder="Escreva seu nome..." clearInput [(ngModel)]="username" text-center></ion-input>
+      <button ion-button  [disabled]="username?.length < 3" (click)="abrirCardapioDia(mesa?.codigoMesa)">Ver cardápio</button>
     </div>
     <div *ngIf="erro">
       <p class="erro">
-       <img class="signal-icon" src="assets/img/signal.svg" /> <br/> 
+       <img class="signal-icon" src="assets/img/signal.svg" /> <br/>
         {{erro}}
       </p>
     </div>

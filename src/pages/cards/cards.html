@@ -3,12 +3,13 @@
 <ion-header>
 
   <ion-navbar color="black">
+      <ion-title>{{nomeEstabelecimento}}</ion-title>
     <!--<ion-buttons left>
           <button ion-button  (click)="openProfile()"><img class="mesa-icon" src="assets/img/mesa.svg" /></button>
       </ion-buttons>-->
-      <!--<ion-buttons right>-->
-    <!--<button ion-button icon-only color="light" (click)="openSettings()"><ion-icon name="options"></ion-icon></button>-->
-      <!--</ion-buttons>-->
+      <ion-buttons right>
+          <button ion-button icon-only color="light" (click)="openComanda()"><img class="vazio-icon" width="32px;" src="assets/img/pedido.svg" /><ion-badge>2</ion-badge></button>
+      </ion-buttons>
       <!--<h1><i class="fa fa-flag" aria-hidden="true"></i>&nbsp; Font Awesome</h1> -->
     </ion-navbar>
 
@@ -17,7 +18,7 @@
 
 <ion-content fullscreen>
 
-    <ion-card *ngFor="let card of cards" (click)="openCardapio(card.codigoCardapio)">
+    <ion-card *ngFor="let card of cards" (click)="openCardapio(card.codigoCardapio,card.tituloCardapio)">
       <div style="background-image: url('http://lorempixel.com/500/200/food');width: 100%;height: 200px;">
         <div style="background-color: rgba(0,0,0, 0.5);z-index: 99;width: 100%;height: 200px; text-align: center;padding-top: 15%">
           <span style="color: white;font-weight: 600;font-size: 22px;">{{card.tituloCardapio}}</span><br/>

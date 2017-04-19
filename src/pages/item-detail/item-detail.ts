@@ -29,6 +29,7 @@ export class ItemDetailPage {
     this.produtoService.detalharProduto(this.item.codigoProduto).subscribe(
                 data => {
                     this.produto = data;
+                    this.item.profilePic = 'assets/img/speakers/foto-prato.jpeg';
                 },
                 err => {
                     console.log(err);

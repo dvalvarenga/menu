@@ -22,6 +22,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { SearchPage } from '../pages/search/search';
 import { ScannerPage } from '../pages/scanner/scanner';
 import { EstabelecimentoPage } from '../pages/estabelecimento/estabelecimento';
+import { ComandaPage } from '../pages/comanda/comanda';
 
 
 
@@ -81,7 +82,8 @@ let pages = [
   SettingsPage,
   SearchPage,
   ScannerPage,
-  EstabelecimentoPage
+  EstabelecimentoPage,
+  ComandaPage
 ];
 
 export function declarations() {

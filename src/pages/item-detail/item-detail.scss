@@ -12,15 +12,31 @@ page-item-detail {
     position: absolute;
   }
 
+  .item-detail p{
+    padding: 10px 10px 10px 10px;
+    text-align: justify;
+  }
+
+  .img-footer{
+    background-color: rgba(255,255,255,0.45);
+    position: relative;
+    bottom: -85%;
+    height: 37px;
+  }
+
   .titulo {
     float: left;
-    width: 75%;
     font-size: 18px;
-    margin-top: -25px;
+    margin-top: -10px;
+    padding-left: 10px;
+    font-weight: 500;
   }
   .preco{
+    float: right;
     font-size: 18px;
-    margin-top: -25px;
+    margin-top: -10px;
+    padding-right: 20px;
+    font-weight: 500;
   }
 
   ion-item{
