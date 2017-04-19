@@ -23,9 +23,9 @@ export class CardsPage {
     constructor(public navCtrl: NavController,public cardapioService: CardapioService,public modalCtrl: ModalController,public http: Http, public navParams: NavParams,public loadingController:LoadingController) {
       this.codigoMesa = navParams.get("codigoMesa");
       this.nomeEstabelecimento = navParams.get("nomeEstabelecimento");
-      alert(this.nomeEstabelecimento);
       this.loading = this.loadingController.create({
-        content: '<ion-spinner name="dots"></ion-spinner>'
+        spinner: 'hide',
+        content: '<div class="overlay-background-loading"><img width="84px" src="assets/img/cooking.gif" /><br><p>Carregando</p></div>'
       });
     }
 
