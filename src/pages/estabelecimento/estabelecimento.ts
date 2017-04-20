@@ -36,7 +36,8 @@ export class EstabelecimentoPage {
 
   this.imagemFundo = '../assets/img/background-blur.jpg';
     this.loading = this.loadingController.create({
-      content: '<ion-spinner name="dots"></ion-spinner>'
+      spinner: 'hide',
+      content: '<div class="overlay-background-loading"><img width="84px" src="assets/img/cooking.gif" /><br><p>Carregando</p></div>'
     });
 
     this.item = navParams.get('item');

@@ -11,7 +11,6 @@
       <div class="titulo"><p>{{produto?.nomeProduto}}</p>
       </div>
       <div class="preco"><p>{{produto?.valorProduto | currency : 'brl' : true : '.2-2'}}</p></div>
-
     </div>
   </div>
   <div class="item-detail">
@@ -22,15 +21,17 @@
   </p>
 <ion-list>
     <ion-item *ngFor="let adicional of produto?.adicionais">
-      <ion-checkbox ng-model="isChecked" color="secondary"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="adicional.checked" (ionChange)="atualizarValorProduto(adicional.codigoAdicional)"></ion-checkbox>
+      <!-- <ion-checkbox [(ngModel)]="adicionaisList[adicional.codigoAdicional]" color="secondary"></ion-checkbox> -->
      <ion-label>{{adicional.nomeAdicional}}</ion-label>
+     <ion-label class="valor-adicional">+ {{adicional.valorAdicional | currency : 'brl' : true : '.2-2'}}</ion-label>
     </ion-item>
   </ion-list>
 </div>
 </div>
 </ion-content>
 <ion-footer>
-  <ion-toolbar (click)="testePedido();">
+  <ion-toolbar (click)="incluirPedido(produto);">
     <ion-title>Fazer pedido</ion-title>
   </ion-toolbar>
 </ion-footer>

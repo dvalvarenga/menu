@@ -18,13 +18,14 @@ page-item-detail {
   }
 
   .img-footer{
-    background-color: rgba(255,255,255,0.45);
+    background-color: rgba(0,0,0,0.5);
     position: relative;
     bottom: -85%;
     height: 37px;
   }
 
   .titulo {
+    color: white;
     float: left;
     font-size: 18px;
     margin-top: -10px;
@@ -32,6 +33,7 @@ page-item-detail {
     font-weight: 500;
   }
   .preco{
+    color: white;
     float: right;
     font-size: 18px;
     margin-top: -10px;
@@ -53,6 +55,11 @@ page-item-detail {
     font-weight: 800;
     font-size: 14px;
   }
+
+.valor-adicional{
+  text-align: right;
+}
+
 
 .toolbar-background{
   background-color: black;

@@ -10,16 +10,15 @@
 
 
 
-      <ion-segment [(ngModel)]="selecao">
+      <!-- <ion-segment [(ngModel)]="selecao">
           <ion-segment-button value="false" (ionSelect)="atualizar(codigoCardapio)">
               Todos
           </ion-segment-button>
-          <!-- Esse é o código certo, foi comentado apenas para provar o erro <ion-segment-button value="true" (ionSelect)="atualizar(codigoCardapio)"> -->
            <ion-segment-button value="true" (ionSelect)="atualizar(2)">
               Promoções
           </ion-segment-button>
-      </ion-segment>
-    <div class="sem-registro" *ngIf="currentItems.length === 0">
+      </ion-segment> -->
+    <div class="sem-registro" *ngIf="currentItems?.length === 0">
       <img class="vazio-icon" src="assets/img/vazio.svg" />
       <p>Nenhum produto encontrado !</p>
     </div>
