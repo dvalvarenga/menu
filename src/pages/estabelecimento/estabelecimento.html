@@ -12,7 +12,16 @@
       <p class="erro">
        <img class="signal-icon" src="assets/img/signal.svg" /> <br/>
         {{erro}}
+      <button ion-button  (click)="tentarNovamente()">Tentar novamente</button>
       </p>
     </div>
+    <div *ngIf="desconhecido">
+      <p class="erro">
+       <img class="signal-icon" src="assets/img/desconhecido.svg" /> <br/>
+        {{desconhecido}}
+      <button ion-button  (click)="tentarNovamente()">Tentar novamente</button>
+      </p>
+    </div>
+
   </div>
 </ion-content>

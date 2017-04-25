@@ -15,14 +15,15 @@
 
   "MAP_TITLE": "Mapa",
 
-  "TUTORIAL_SLIDE1_TITLE": "Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "O <b>Ionic Super Starter</b> é um starter para Ionic completo, com diversos componentes e páginas prontas para ser utilizado como guia de melhores práticas.",
+  "TUTORIAL_SLIDE1_TITLE": "E aí, tudo bem ?",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "Com o <b>Apperitivo</b> agora é possível você fazer todos os seus pedidos direto no celular, vamos tentar te explicar um pouco como funciona o aplicativo, ok ?",
 
-  "TUTORIAL_SLIDE2_TITLE": "Como utilizar o Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Combine os tipos de páginas que você quer e remova aquelas que não precisa. No starter existem muitos casos de uso comuns de layouts e páginas como login, cadastro, abas e de tutorial.",
+  "TUTORIAL_SLIDE2_TITLE": "Em qual mesa você está ?",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Na sua mesa você vai encontrar a nossa marca e o QRCODE. Basta abrir o <b>Apperitivo</b> e apontar a câmera para ler o código. Pronto, identificamos sua mesa.",
 
-  "TUTORIAL_SLIDE3_TITLE": "Iniciando o projeto",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Precisa de ajuda? Dê uma olhada no README do Super Starter para um tutorial completo",
+  "TUTORIAL_SLIDE3_TITLE": "O cardápio já esta em sua mão!",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Pronto. Agora você já pode fazer os pedidos diretamente no celular. Ah, podemos até dividir a conta entre os seus amigos que estão usando o <b>Apperitivo</b>.",
+  
   "TUTORIAL_SLIDE4_TITLE": "Pronto para começar ?",
 
 

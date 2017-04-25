@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams , LoadingController } from 'ionic-angular';
 import { CardsPage } from '../cards/cards';
+import { ScannerPage } from '../scanner/scanner';
 import { Storage } from '@ionic/storage';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -25,6 +26,7 @@ export class EstabelecimentoPage {
   loading: any;
   imagemFundo: any;
   erro : any;
+  desconhecido : any;
   username: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public http: Http , public loadingController:LoadingController,public mesaService: MesaService,public storage: Storage) {
@@ -48,8 +50,12 @@ export class EstabelecimentoPage {
         //this.mesaService.identificarMesa(this.item.codigoMesa).subscribe(
         this.mesaService.identificarMesa(1).subscribe(
               data => {
-                  this.imagemFundo = "url('../assets/img/background-1.jpg')";
-                  this.mesa = data;
+                  if(data != null){
+                    this.imagemFundo = "url('../assets/img/background-1.jpg')";
+                    this.mesa = data;
+                  }else{
+                    this.desconhecido = "Não identificamos a sua mesa..."; 
+                  }
               },
               err => {
                 this.loading.dismiss();
@@ -68,6 +74,10 @@ export class EstabelecimentoPage {
         animate: true,
         direction: 'forward'
       });
+  }
+
+  tentarNovamente(){
+    this.navCtrl.setRoot(ScannerPage);
   }
 
 }
